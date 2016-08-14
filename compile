@@ -1,0 +1,7 @@
+#!/bin/sh
+
+links='-mwindows -static-libstdc++ -static-libgcc -lOpenGL32 -lglu32 -lglew32 -lfreeglut' 
+
+g++ -g -c main.cpp Shader.cpp ObjLoader.cpp OpenGL.cpp ShaderCreator.cpp -I'../project/freeglut/include'  -I'../project/glew/include' 
+g++ main.o ObjLoader.o OpenGL.o Shader.o ShaderCreator.o -L'../project/freeglut/lib/x64' -L'../project/glew/lib' $links -o salida.exe
+rm *.o

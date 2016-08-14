@@ -1,0 +1,21 @@
+#version 120
+in vec3 posicion;
+in vec3 rotation;
+in int gl_VertexID;
+varying float verte;
+
+uniform mat4 Translate;
+uniform mat4 RotateX;
+uniform mat4 RotateY;
+uniform mat4 RotateZ;
+
+mat4 Rotate = RotateX * RotateY * RotateZ;
+
+uniform mat4 Scalee;
+uniform mat4 PerspectiveProjection;
+
+void main()
+{
+	verte = float(gl_VertexID);
+	gl_Position = gl_Vertex * Rotate * Translate * PerspectiveProjection;
+}

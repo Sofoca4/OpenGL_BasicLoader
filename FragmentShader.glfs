@@ -1,0 +1,22 @@
+in float verte;
+
+
+void main()
+{
+	if( verte < 32 )
+	{
+		gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );	
+	} else if( verte >= 32 && verte < 44 )
+	{
+		gl_FragColor = vec4( 0.0, 1.0, 0.0, 1.0 );
+	} else if( verte >= 44 && verte < 56 )
+	{
+		gl_FragColor = vec4( 0.0, 0.0, 1.0, 1.0 );
+	} else if( verte >= 56 && verte < 60 )
+	{
+		gl_FragColor = vec4( 0.0, 0.0, 1.0, 1.0 );
+	} else if( verte >= 60 )
+	{
+		gl_FragColor = vec4( 0.5, 0.5, 0.5, 1.0 );
+	}
+}
