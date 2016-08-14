@@ -1,5 +1,5 @@
 # OpenGL_BasicLoader
-A really Basic loader, there is lot of code that must be fixed but it will show you the main code structure.
+Example about a really basic loader, there is lot of code that must be fixed but it will show you the main code structure in simple code.
 
 These files are just code and you must have the respective DLC to run the progran.
 
